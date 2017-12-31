@@ -1,9 +1,0 @@
-﻿  BoomCMStorm.cpp
-c:\users\mokimeki\source\repos\boomcmstorm\boomcmstorm\boomcmstorm.cpp(59): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\mokimeki\source\repos\boomcmstorm\boomcmstorm\boomcmstorm.cpp(92): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
-c:\users\mokimeki\source\repos\boomcmstorm\boomcmstorm\boomcmstorm.cpp(143): warning C4244: '=': conversion from 'float' to 'BYTE', possible loss of data
-c:\users\mokimeki\source\repos\boomcmstorm\boomcmstorm\boomcmstorm.cpp(144): warning C4244: '=': conversion from 'float' to 'BYTE', possible loss of data
-c:\users\mokimeki\source\repos\boomcmstorm\boomcmstorm\boomcmstorm.cpp(145): warning C4244: '=': conversion from 'float' to 'BYTE', possible loss of data
-c:\users\mokimeki\source\repos\boomcmstorm\boomcmstorm\boomcmstorm.cpp(179): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\mokimeki\source\repos\boomcmstorm\boomcmstorm\boomcmstorm.cpp(193): warning C4305: '=': truncation from 'double' to 'float'
-  BoomCMStorm.vcxproj -> C:\Users\MokiMeki\source\repos\BoomCMStorm\x64\Debug\BoomCMStorm.exe

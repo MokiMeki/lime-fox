@@ -1,4 +1,0 @@
-﻿BoomCMStorm.obj : error LNK2019: unresolved external symbol _IsDevicePlug referenced in function _main
-C:\Users\MokiMeki\source\repos\BoomCMStorm\BoomCMStorm\CMSDK\SDKDLL.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
-C:\Users\MokiMeki\source\repos\BoomCMStorm\BoomCMStorm\CMSDK\.\SDKDLL.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
-C:\Users\MokiMeki\source\repos\BoomCMStorm\Debug\BoomCMStorm.exe : fatal error LNK1120: 1 unresolved externals

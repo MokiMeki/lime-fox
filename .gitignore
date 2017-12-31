@@ -32,4 +32,8 @@
 *.app
 
 # Visual Studio Preferences
-.vs/*
+.vs/
+
+# artifact
+lime-fox/x64
+x64
