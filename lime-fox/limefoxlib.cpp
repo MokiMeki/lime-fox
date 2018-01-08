@@ -37,6 +37,16 @@ float limefox_notExceed(float expression, float notExceed) {
 	return expression;
 }
 
+float limefox_limit(float expression, float min, float max) {
+	if (expression > max) {
+		return max;
+	}
+	if (expression < min) {
+		return min;
+	}
+	return expression;
+}
+
 float limefox_safeDivide(float a, float b) {
 	if (b == 0) {
 		b = 0.000001;

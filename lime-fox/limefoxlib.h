@@ -13,3 +13,5 @@ float limefox_safeDivide(float a, float b);
 void limefox_setKeyColorWhite(COLOR_MATRIX* colorMatrix, int row, int column, BYTE rgb);
 
 void limefox_setKeyColor(COLOR_MATRIX* colorMatrix, int row, int column, BYTE r, BYTE g, BYTE b);
+
+float limefox_limit(float expression, float min, float max);

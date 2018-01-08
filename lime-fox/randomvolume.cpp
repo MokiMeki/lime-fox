@@ -35,24 +35,24 @@ int limefox_random_volume() {
 		oldVolume = volume;
 		volume = GetNowVolumePeekValue();
 
+		printf("limit: %f\n", limefox_limit(1.3 - volume, 0.6, 0.99));
 		for (int i = 0; i < S_MAX_LED_ROW; i++) {
 			for (int j = 0; j < S_MAX_LED_COLUMN; j++) {
-				ColorMatrix.KeyColor[i][j].r *= 0.85;
-				ColorMatrix.KeyColor[i][j].g *= 0.85;
-				ColorMatrix.KeyColor[i][j].b *= 0.85;
+				ColorMatrix.KeyColor[i][j].r *= limefox_limit(1.3 - volume, 0.6, 0.99);
+				ColorMatrix.KeyColor[i][j].g *= limefox_limit(1.3 - volume, 0.6, 0.99);
+				ColorMatrix.KeyColor[i][j].b *= limefox_limit(1.3 - volume, 0.6, 0.99);
 			}
 		}
 
 		if (volume > maxVolume) {
 			maxVolume = volume;
-			random_color(&ColorMatrix, volume*10, 0, MAXG, MAXB);
+			random_color(&ColorMatrix, volume*5, 0, MAXG, MAXB);
 		}
 		if (volume < minVolume) {
 			minVolume = volume;
 		}
 		maxVolume = limefox_average(maxVolume, volume);
 		minVolume = limefox_average(minVolume, volume);
-		printf("volume %f \n", volume);
 		printf("Plug: %s\n", IsDevicePlug() ? "true" : "false");
 		limefox_volume_visualization("Max:     ", maxVolume);
 		limefox_volume_visualization("Current: ", GetNowVolumePeekValue());
