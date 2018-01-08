@@ -24,6 +24,12 @@
     <ClCompile Include="speedmeter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="randomvolume.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="limefoxlib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMSDK\SDKDLL.h">
@@ -36,6 +42,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="speedmeter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="randomvolume.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="limefoxlib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
