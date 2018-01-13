@@ -1,4 +1,16 @@
 #pragma once
+
+#define S_MAX_LED_ROW		6
+#define S_MAX_LED_COLUMN	18
+
+struct KEY {
+	bool isPressed;
+};
+
+struct KEYS_MATRIX {
+	KEY Keys[S_MAX_LED_ROW][S_MAX_LED_COLUMN];
+};
+
 void limefox_volume_visualization(const char* text, float volume);
 
 BYTE limefox_average(BYTE a, BYTE b);
@@ -15,3 +27,5 @@ void limefox_setKeyColorWhite(COLOR_MATRIX* colorMatrix, int row, int column, BY
 void limefox_setKeyColor(COLOR_MATRIX* colorMatrix, int row, int column, BYTE r, BYTE g, BYTE b);
 
 float limefox_limit(float expression, float min, float max);
+
+int limefox_overflow(int expression, int max);

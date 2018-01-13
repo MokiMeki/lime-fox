@@ -1,9 +1,6 @@
 #include "stdafx.h"
 #include "limefoxlib.h"
 
-#define S_MAX_LED_ROW		6
-#define S_MAX_LED_COLUMN	18
-
 #define MAXR 255
 #define MAXG 255
 #define MAXB 255
