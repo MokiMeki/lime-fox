@@ -5,7 +5,10 @@
 #define MAXG 255
 #define MAXB 255
 
-#define FPS 120;
+#define FPS 120
+
+//Variations
+#define STICK false
 
 const long DELAY = 1000 / FPS;
 
@@ -67,7 +70,7 @@ int limefox_random_volume() {
 		if (_kbhit()) {
 			break;
 		}
-		//Sleep(DELAY);
+		Sleep(DELAY);
 		system("cls");
 		count++;
 	}
@@ -75,10 +78,29 @@ int limefox_random_volume() {
 }
 
 void random_color(COLOR_MATRIX* ColorMatrix, int times, BYTE r, BYTE g, BYTE b) {
-	for (int i = 0; i < times; i++) {
+	if (STICK) {
+		times = limefox_limit(times*2, 1, 10);
 		int row = rand() % S_MAX_LED_ROW;
 		int column = rand() % S_MAX_LED_COLUMN;
-
 		limefox_setKeyColor(ColorMatrix, row, column, r, g, b);
+
+		//random position around current
+		for (int i = 0; i < times; i++) {
+			int rowOffset = rand() % 3 - 1;
+			int columnOffset = rand() % 3 - 1;
+			int resultRow = limefox_limit(row + rowOffset, 0, S_MAX_LED_ROW - 1);
+			int resultColumn = limefox_limit(column + columnOffset, 0, S_MAX_LED_COLUMN - 1);
+			row = resultRow;
+			column = resultColumn;
+			limefox_setKeyColor(ColorMatrix, resultRow, resultColumn, r *= 0.8, g *= 0.8, b *= 0.8);
+		}
+	}
+	else {
+		times = limefox_limit(times, 1, 5);
+		for (int i = 0; i < times; i++) {
+			int row = rand() % S_MAX_LED_ROW;
+			int column = rand() % S_MAX_LED_COLUMN;
+			limefox_setKeyColor(ColorMatrix, row, column, r, g, b);
+		}
 	}
 }

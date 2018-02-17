@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "limefoxlib.h"
 
 void limefox_volume_visualization(const char* text, float volume) {
 	float step = 0.025;
@@ -16,6 +17,10 @@ void limefox_volume_visualization(const char* text, float volume) {
 		count += step;
 	}
 	printf("]\n");
+}
+
+BYTE limefox_average_with_factor(BYTE a, BYTE b, float aFactor){
+	return (a*aFactor + b) / (aFactor + 1);
 }
 
 BYTE limefox_average(BYTE a, BYTE b) {

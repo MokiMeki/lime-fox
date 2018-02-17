@@ -13,6 +13,7 @@ struct KEYS_MATRIX {
 
 void limefox_volume_visualization(const char* text, float volume);
 
+BYTE limefox_average_with_factor(BYTE a, BYTE b, float aFactor);
 BYTE limefox_average(BYTE a, BYTE b);
 float limefox_average(float a, float b);
 
