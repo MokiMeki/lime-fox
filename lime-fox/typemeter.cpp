@@ -7,23 +7,32 @@
 
 #define IDLE_TIMEOUT 30
 #define IDLE_PAINT_DELAY 50
+#define CLEAR_AT_START true
+#define RANDOM_COLOR true
 
 static COLOR_MATRIX ColorMatrix = COLOR_MATRIX();
 
 int count = 0;
 int pressedKey = 0;
 int idleTime = 0;
-BYTE randR = 0;
-BYTE randG = 0;
-BYTE randB = 0;
+BYTE randR = 50;
+BYTE randG = 255;
+BYTE randB = 50;
 
 void paintNext() {
-	if (count == 0 || count == 1 || count == 5 || count == 10 || count == 15) {
-		do {
-			randR = rand() % 255;
-			randG = rand() % 255;
-			randB = rand() % 255;
-		} while (randR < 200 && randG < 200 && randB < 200);
+	if (count == 0) {
+		if (CLEAR_AT_START) {
+			for (int i = 0; i < S_MAX_LED_COLUMN; i++) {
+				limefox_setKeyColor(&ColorMatrix, 0, i, IDLE_R, IDLE_G, IDLE_B);
+			}
+		}
+		if (RANDOM_COLOR) {
+			do {
+				randR = rand() % 255;
+				randG = rand() % 255;
+				randB = rand() % 255;
+			} while (randR < 200 && randG < 200 && randB < 200);
+		}
 	}
 	if (count == 10 || count == 5) {
 		count++;
