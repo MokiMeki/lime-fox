@@ -36,6 +36,9 @@
     <ClCompile Include="softtouch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="typemeter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMSDK\SDKDLL.h">
@@ -60,6 +63,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="softtouch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typemeter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
