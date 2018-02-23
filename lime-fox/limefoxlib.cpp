@@ -31,6 +31,10 @@ float limefox_average(float a, float b) {
 	return (a + b) / 2;
 }
 
+long limefox_average(long a, long b) {
+	return (a + b) / 2;
+}
+
 void limefox_printRGB(KEY_COLOR keyColor) {
 	printf("R: %3d;G: %3d;B: %3d\n", keyColor.r, keyColor.g, keyColor.b);
 }
