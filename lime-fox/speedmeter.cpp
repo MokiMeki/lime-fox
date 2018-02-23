@@ -38,7 +38,7 @@ int speedmeter() {
 			count = 0;
 		}
 		if (color > 0){
-			color = limefox_limit(color - 5, 0, 255);
+			color = limefox_limit(color - 3, 0, 255);
 		}
 		if (_kbhit()) {
 			break;
